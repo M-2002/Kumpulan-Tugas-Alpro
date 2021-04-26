@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+ int bil_n, N;
+ int bil_n1 = 1;
+ int bil_n2 = 0;
+ 
+printf("======================================================\n"
+ " PROGRAM MENAMPILKAN DERET FIBONACCI N BILANGAN 
+\n"
+ 
+"======================================================\n\n");
+ printf("Masukkan banyak bilangan fibonacci : 
+");scanf("%d",&N);
+ printf("\n");
+ if(N != 0)
+ {
+ printf("Deret fibonacci %d bilangan : \n"
+ "===============================\n\n",N);
+ for(int index = 0 ; index < N ; index++)
+ {
+ if(index == 0)
+ {
+ bil_n = bil_n2;
+ }
+ else if(index == 1)
+ {
+ bil_n = bil_n1;
+ }
+ else if(index > 1)
+ {
+ bil_n = bil_n1 + bil_n2;
+ bil_n2 = bil_n1;
+ bil_n1 = bil_n;
+ }
+ if(index == (N-1))
+ {
+ printf("%d",bil_n);
+ }
+ else
+ {
+ printf("%d, ",bil_n);
+ }
+ }
+ }
+ printf("\n\n");
+ system("pause");
+ return(0);
+}
